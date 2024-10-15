@@ -1,0 +1,50 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=League+Script&family=Ojuju:wght@200..800&family=Pacifico&family=Reenie+Beanie&family=Rubik+Dirt&family=Tiro+Telugu:ital@0;1&display=swap');
+
+
+* {
+    margin:0;
+    padding:0;
+
+
+}
+
+
+
+
+.Banner-Container {
+    width: 100%;
+    margin:0 auto;
+
+}
+
+
+
+.Banner-Container img {
+    object-fit: cover;
+    width: 100%;
+    height: fit-content;
+}
+
+
+
+
+
+
+.Welcome-Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    max-width: 3000px;
+}
+
+
+
+.Welcome-Wrapper h3 {
+    font-size: 3rem;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}

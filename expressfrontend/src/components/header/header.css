@@ -1,0 +1,42 @@
+
+
+
+
+
+
+body {
+    margin:0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+.header-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: skyblue;
+}
+
+.header-container:hover{
+    cursor: pointer;
+}
+
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    max-width: 1300px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.8rem;
+}

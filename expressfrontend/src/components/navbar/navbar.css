@@ -1,0 +1,514 @@
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Marcellus&family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Marcellus&family=Merienda:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Marcellus&family=Merienda:wght@300..900&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Script&display=swap');
+
+
+body {
+    margin:0;
+    padding: 0;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+/*----------------navbar------------*/
+
+.navbar-container {
+    width: 100%;
+    overflow: hidden;
+    padding:0.8em 1em;
+    background:white;
+}
+
+
+.navbar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin:0 auto;
+    max-width: 1500px;
+    color:green;
+
+}
+
+.navbar-wrapper h3 {
+    font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.3rem;
+}
+
+
+.navbar-wrapper img {
+    object-fit: contain;
+    width: 100px;
+    background: transparent;
+}
+
+
+.navbar-wrapper button {
+    border:none;
+    outline: none;
+    padding:0.8em 1em;
+    font-size: 1.3rem;
+    background:transparent;
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    cursor: pointer;
+}
+
+
+.navbar-wrapper button:hover {
+    color:black;
+}
+
+
+
+
+
+
+
+/*----------------Content-----------------------------------*/
+
+
+.Content-Container {
+    width: 100%;
+    overflow: hidden;
+    height: 410px;
+    background:whitesmoke
+}
+
+
+
+.Content-Wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+    margin:0 auto;
+    max-width: 3000px;
+    transition: 3s linear;
+
+
+}
+
+
+.Content-Wrapper img {
+    width: 300px;
+    object-fit: contain;
+    background:transparent;
+    mix-blend-mode: multiply;
+}
+
+
+
+.beverage-content-header {
+    display: flex;
+    align-items:baseline;
+    justify-content: start;
+    flex-direction: column;
+    margin:0 auto;
+    max-width: 400px;
+    font-size: 1.3rem;
+    text-align: center;
+
+}
+
+
+.beverage-content-header h3 {
+    font-family: "Cormorant SC", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.8rem;
+}
+
+
+
+.beverage-content-header h1 {
+    font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.soda-image {
+    position: relative;
+    top:0px;
+    left: 0px;
+    animation-name: sodaImage;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+@keyframes sodaImage {
+    from {transform: rotateY(0deg); }
+    to {transform: rotateY(360deg);}
+}
+
+
+
+
+.beverage-one {
+    position: relative;
+    top:0px;
+    left: 0px;
+    animation-name: beverageOne;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+    background: transparent;
+    mix-blend-mode: multiply;
+    transition: 3s linear;
+}
+
+@keyframes beverageOne {
+    from {top:50px; left: -10px; }
+    to {top:150px; left: 10px;}
+}
+
+
+
+.beverage-two {
+    position: relative;
+    top:0px;
+    left: 0px;
+    animation-name: beverageTwo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+}
+
+
+
+
+@keyframes beverageTwo {
+    from {top:50px; left: -10px; }
+    to {top:-50px; left: 40px;}
+}
+
+
+
+
+
+.beverage-three {
+    position: relative;
+    top:0px;
+    left: 0px;
+    animation-name: beverageThree;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+}
+
+
+
+
+@keyframes beverageThree {
+    from {top:50px; left: -10px; }
+    to {top:-50px; left: 10px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------CONTENT CONTAINER TWO-----------------------------------*/
+
+
+.Content-Container-Two {
+    width: 100%;
+    overflow: hidden;
+    background:black;
+    padding: 1em;
+
+}
+
+.Beverage-Preference-Wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-evenly;
+    max-width: 1500px;
+    margin: 0 auto;
+
+}
+
+
+.Beverage-Preference-Wrapper h3 {
+    color:white
+}
+
+
+.Beverage-Preference-Wrapper img {
+    width: 55px;
+    object-fit: contain;
+    background:transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------CONTENT CONTAINER THREE ImageCarousel -----------------------------------*/
+
+
+
+.Content-Container-Three {
+    width: 100%;
+    overflow: hidden;
+    background:black;
+    padding:3em
+}
+
+
+
+
+.slideshow-container {
+    max-width: 400px;
+    position: relative;
+    margin: auto;
+  }
+  
+
+
+  .slideshow-container img {
+    background:transparent;
+   
+  }
+
+
+  .mySlides {
+    display: none;
+  }
+  
+  .mySlides.active {
+    display: block;
+  }
+  
+  .numbertext {
+    color: black;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .text {
+    color: black;
+    font-size: 25px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Styling for the image wrapper */
+  .image-wrapper {
+    width: 100%; /* Make sure the image wrapper takes the full width */
+    height: 400px; /* Fixed height for all images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures all images fit uniformly without distortion */
+  }
+  
+  /* Optional: Add some fading animation for the slides */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+  }
+
+
+
+
+
+
+
+
+
+
+/*----------------CONTENT CONTAINER FOUR -----------------------------------*/
+
+
+
+
+  .Content-Container-Four {
+    width: 100%;
+    overflow: hidden;
+    background-color:lightskyblue;
+    height: 400px;
+   
+  }
+
+
+
+  .Content-Container-Wrapper {
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    max-width: 2000px;
+  }
+
+
+
+  .Content-Container-Wrapper img {
+    width: 800px;
+    object-fit: contain;
+  }
+
+
+  .welcome-wrapper {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    margin:0 auto;
+    max-width:500px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+  .welcome-wrapper h1 {
+    font-family: "League Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+  }
+
+  .welcome-wrapper .subscribe-below-div {
+    color:white;
+    background:navy;
+    border:none;
+    border-radius: none;
+    outline: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    padding:3em;
+  }
+
+  .welcome-wrapper button:hover,
+  .welcome-wrapper button:focus {
+    background:lightgreen;
+    color:whitesmoke
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*---------------------------CONTENT CONTAINER FIVE & EXPRESS JS USER FORM- -----------------------------------*/
+
+
+
+  

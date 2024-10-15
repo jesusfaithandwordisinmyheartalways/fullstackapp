@@ -1,0 +1,108 @@
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=League+Script&family=Rubik+Dirt&family=Tiro+Telugu:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Script&family=Reenie+Beanie&family=Rubik+Dirt&family=Tiro+Telugu:ital@0;1&display=swap');
+
+
+
+
+
+
+
+.Shop-Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    max-width: 1000px;
+}
+
+.Shop-Wrapper h3 {
+    font-size: 3rem;
+    font-family: "Rubik Dirt", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+
+
+
+
+
+
+
+
+
+.Shop-Container-Two {
+    width: 100%;
+    overflow: hidden;
+    background: white;
+}
+
+
+.Shop-Wrapper-Two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    max-width: 3000px;
+}
+
+
+
+
+
+.Shop-Wrapper-Two h3 {
+    font-size: 2rem;
+    font-family: "Reenie Beanie", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+.Tag-Beverage {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 900;
+    margin:0px 10px
+}
+
+
+
+
+
+
+
+
+
+
+.Shop-Container-Three {
+    width: 100%;
+    overflow: hidden;
+    background: white;
+    margin-block: 30px;
+    
+}
+
+
+.Shop-Wrapper-Three {
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    max-width: 3000px;
+    margin: 0 auto;
+    height: 410px;
+}
+
+
+
+.Shop-Wrapper-Three img {
+    width: 410px;
+    object-fit: contain;
+    border-radius: 20%;
+}
+

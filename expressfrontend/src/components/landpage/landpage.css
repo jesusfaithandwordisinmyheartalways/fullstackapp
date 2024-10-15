@@ -1,0 +1,81 @@
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=League+Script&family=Tiro+Telugu:ital@0;1&display=swap');
+
+
+
+
+.Form-Container {
+    width: 100%;
+    overflow: hidden;
+    background:white;
+    height: 520px;
+    padding:1em
+    
+}
+
+
+.Form-Wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    max-width: 550px;
+    border-radius: 10px;
+    background:orange;
+    height: 499px;
+    text-align: center;
+  
+}
+
+.Form-Wrapper input {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border:none;
+    outline:none;
+    border-radius: 10px;
+    padding:1em 5em;
+    margin:3px;
+    font-size: 1rem;
+
+}
+
+
+.Form-Wrapper h1 {
+    font-family: "Tiro Telugu", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.Form-Wrapper label {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:whitesmoke;
+    font-size: 1rem;
+}
+
+.Form-Wrapper button {
+    color:black;
+    background:darkcyan;
+    padding:1em 3em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border:none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin:20px 3px
+}
+
+
+.Form-Wrapper button:hover,
+.Form-Wrapper button:focus {
+    color:white;
+    background:lightgreen
+}
+
+
+
+

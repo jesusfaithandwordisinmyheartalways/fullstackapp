@@ -1,0 +1,109 @@
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=League+Script&family=Ojuju:wght@200..800&family=Reenie+Beanie&family=Rubik+Dirt&family=Tiro+Telugu:ital@0;1&display=swap');
+
+
+
+
+
+.Footer-Container {
+    width: 100%;
+    overflow: hidden;
+    background:slategray;
+    height: 310px;
+
+}
+
+
+
+.Footer-Wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin:0 auto;
+    max-width: 3000px;
+}
+
+
+.Footer-Wrapper img {
+    width: 45px;
+    object-fit: contain;
+    border-radius: 10%;
+}
+
+
+.footer-beverage-wrapper {
+    display: flex;
+    align-items:baseline;
+    justify-content: start;
+
+}
+
+.footer-beverage-wrapper h3 {
+    font-family: "Ojuju", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color:white;
+    font-size: 1.5rem;
+}
+
+
+.footer-beverage-wrapper-two {
+    display: flex;
+    align-items:end;
+    justify-content: end;
+    gap:10px
+}
+
+
+
+
+
+
+
+.Footer-Wrapper-Two {
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    justify-content: start;
+    margin:0 auto;
+    max-width: 3000px;
+}
+
+
+
+.Footer-Wrapper-Two p {
+    color:white;
+    font-size: 0.6rem;
+    margin:7px
+}
+
+
+
+
+
+
+.Footer-Container-Two{
+    width: 100%;
+    overflow: hidden;
+    background: dodgerblue;
+}
+
+
+.Footer-Wrapper-Three {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin:0 auto;
+    max-width: 1000px;
+}
+
+
+.Footer-Wrapper-Three > div {
+    color:white;
+    font-size: 0.9rem;
+}
