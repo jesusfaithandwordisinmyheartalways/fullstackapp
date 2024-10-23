@@ -36,12 +36,12 @@ const SodaLandPage:React.FC = () => {
                             'Content-Type': 'application/json',
                         },
                             body:JSON.stringify(data),
-                            credentials: 'include',
+                            credentials: 'include', //ensures cookies are sent between different domains or ports
                          })
 
-                         const contentType = response.headers.get('content-type')
+                         const contentType = response.headers.get('content-type')   // Always check if the response is valid JSON
 
-                         if(!contentType || !contentType.includes("application/json")){
+                         if(!contentType || !contentType.includes("application/json")){  // Handle non-JSON responses gracefully
                             throw new Error('"Invalid response format, expected JSON."')
                          }
                          

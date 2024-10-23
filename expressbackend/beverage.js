@@ -25,9 +25,9 @@ app.use(cookieParse())
 
 
 const serverLimit = rateLimit({
-    windowMs: 15 * 60 * 1000,
-    max: 100,
-    message: 'Too many request, try again later',
+    windowMs: 15 * 60 * 1000,  // 15-minute time window
+    max: 100,    // Maximum 100 requests allowed per windowMs
+    message: 'Too many request, try again later',  // Custom message when limit is reached
 })
 app.use(serverLimit)
 
@@ -41,7 +41,8 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 app.post('/submit', (req, res) => {
     const { username , password, confirmPassword, email } = req.body;
-    console.log('Response body:', req.body)
+    console.log('Response body:', req.body);
+
     if(!userRegex.test(username)) {
         return res.status(400).json({message: 'Username must contain at least 1 uppercase, 8 chars, 3 special chars.'})
     }
@@ -56,6 +57,7 @@ app.post('/submit', (req, res) => {
     }
     const token = jsonWebToken.sign({ username, email }, secretKey, { expiresIn: '30d'});
     const cookieSetToExpire = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
+
     res.cookie('authenticationToken', token, {
         httpOnly:true,
         secure:false,
@@ -69,6 +71,7 @@ app.post('/submit', (req, res) => {
 });
 
 
+// Catch-all to avoid empty response
 app.use((req, res) => {
     res.status(404).json({message: 'not found'})
 })
