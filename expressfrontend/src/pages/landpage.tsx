@@ -10,8 +10,9 @@ import Page from '../components/navbar/navbar'
 import Shop from '../components/shop/shop'
 import Footer from '../components/footer/footer'
 import { useState } from 'react'
-import '../components/landpage/landpage.css'
 import { useNavigate } from 'react-router-dom'
+import '../components/landpage/landpage.css'
+
 
 const SodaLandPage:React.FC = () => {
         const [username, setUsername] = useState('')
@@ -28,7 +29,7 @@ const SodaLandPage:React.FC = () => {
                 setSuccessMessage('')
                 const data  = { username , password, confirmPassword , email }
                 try {
-                    const response =  await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/submit`, {
+                    const response =  await fetch('http://localhost:8001/submit', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -38,39 +39,39 @@ const SodaLandPage:React.FC = () => {
                          })
 
                          const contentType = response.headers.get('content-type')   // Always check if the response is valid JSON
-
-                         if(!contentType || !contentType.includes("application/json")){  // Handle non-JSON responses gracefully
-                            throw new Error('"Invalid response format, expected JSON."')
+                         if(response.ok && contentType && contentType.includes('application/json')) {
+                              const results = await response.json();
+                              setSuccessMessage(results.message);
+                              setUsername('')
+                              setPassword('')
+                              setConfirmPassword('')
+                              setEmail('')
+                              navigate('/welcomepage')
+                         } else {
+                              const errorResponse = await response.json()
+                              setErrorMessage(errorResponse.message || 'an error has occurred')
                          }
-                         
-                         const result = await response.json()
-                         if(!response.ok) {
-                            throw new Error(result.message || 'error has occurred')
-                         }
-
-                         setSuccessMessage(result.message)
-                         setUsername('')
-                         setPassword('')
-                         setConfirmPassword('')
-                         setEmail('')
-
-                         navigate('/welcomepage');
                          }catch(error:any)  {
                             setErrorMessage(error.message || "Something went wrong")
                      }
                  }
 
-
-
-
-  return (
+      return (
     <>
     {/*------------------------HEADER COMPONENT-------------------------*/}
     <Header />
 
 
+
+
+
+
      {/*----------------------PAGE COMPONENT----------------------*/}
      <Page />
+
+
+
+
 
           {/*-------------------EXPRESS JS FORM CODE --------------------*/}
 
@@ -99,25 +100,12 @@ const SodaLandPage:React.FC = () => {
 
             </div>
     
-    
-
-
-
-
 
 
 
 
     {/*-----------------------SHOP COMPONENT--------------------------*/}
     <Shop />
-    
-    
-
-
-
-
-
-
 
 
         {/*------------------------FOOTER COMPONENT-------------------------*/}
