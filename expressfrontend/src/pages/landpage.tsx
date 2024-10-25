@@ -28,7 +28,7 @@ const SodaLandPage:React.FC = () => {
                 setSuccessMessage('')
                 const data  = { username , password, confirmPassword , email }
                 try {
-                    const response =  await fetch('/api/submit', {
+                    const response =  await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/submit`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
