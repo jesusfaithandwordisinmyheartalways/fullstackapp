@@ -10,10 +10,8 @@ import Page from '../components/navbar/navbar'
 import Shop from '../components/shop/shop'
 import Footer from '../components/footer/footer'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import '../components/landpage/landpage.css'
-import {useRouter} from 'next/router'
-
+import { useNavigate } from 'react-router-dom'
 
 const SodaLandPage:React.FC = () => {
         const [username, setUsername] = useState('')
@@ -22,7 +20,7 @@ const SodaLandPage:React.FC = () => {
         const [email, setEmail] = useState('')
         const [errorMessage, setErrorMessage] = useState('')
         const [successMessage, setSuccessMessage] = useState('')
-        const router = useRouter()
+        const navigate = useNavigate()
 
         const userSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
                 event.preventDefault()
@@ -56,7 +54,7 @@ const SodaLandPage:React.FC = () => {
                          setConfirmPassword('')
                          setEmail('')
 
-                         router.push('/welcomepage')
+                         navigate('/welcomepage');
                          }catch(error:any)  {
                             setErrorMessage(error.message || "Something went wrong")
                      }
@@ -71,16 +69,8 @@ const SodaLandPage:React.FC = () => {
     <Header />
 
 
-
-
-
-
      {/*----------------------PAGE COMPONENT----------------------*/}
      <Page />
-
-
-
-
 
           {/*-------------------EXPRESS JS FORM CODE --------------------*/}
 
