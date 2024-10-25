@@ -12,7 +12,7 @@ import Footer from '../components/footer/footer'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../components/landpage/landpage.css'
-
+import {useRouter} from 'next/router'
 
 
 const SodaLandPage:React.FC = () => {
@@ -22,7 +22,7 @@ const SodaLandPage:React.FC = () => {
         const [email, setEmail] = useState('')
         const [errorMessage, setErrorMessage] = useState('')
         const [successMessage, setSuccessMessage] = useState('')
-        const navigate = useNavigate()
+        const router = useRouter()
 
         const userSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
                 event.preventDefault()
@@ -30,7 +30,7 @@ const SodaLandPage:React.FC = () => {
                 setSuccessMessage('')
                 const data  = { username , password, confirmPassword , email }
                 try {
-                    const response =  await fetch('http://localhost:5002/submit', {
+                    const response =  await fetch('/api/submit', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ const SodaLandPage:React.FC = () => {
                          setConfirmPassword('')
                          setEmail('')
 
-                         navigate('/welcomepage')
+                         router.push('/welcomepage')
                          }catch(error:any)  {
                             setErrorMessage(error.message || "Something went wrong")
                      }
@@ -89,7 +89,7 @@ const SodaLandPage:React.FC = () => {
              <div className='Form-Wrapper'>
 
              <form onSubmit={userSubmit} className='Subscribe-Form' id='subscribe-form'>
-            <h1>Subscribe</h1>
+               <h1>Subscribe</h1>
               { errorMessage && <div>{errorMessage}</div> }
               {successMessage && <div>{successMessage}</div> }
               <div><label htmlFor='username'>Username</label></div>

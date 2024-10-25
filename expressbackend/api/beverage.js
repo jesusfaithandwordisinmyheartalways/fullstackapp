@@ -15,7 +15,7 @@ const app = express()
 
 //CORS setup: Allow request from the frontend localhost:3003
 app.use(cors({
-    origin: 'http://localhost:5001',    //allow the frontend request
+    origin: 'http://localhost:3000',    //allow the frontend request
     credentials:true,    // allow cookies to be sent/received
 }))
 
@@ -71,13 +71,6 @@ app.post('/submit', (req, res) => {
 });
 
 
-// Catch-all to avoid empty response
-app.use((req, res) => {
-    res.status(404).json({message: 'not found'})
-})
 
+module.exports = app;
 
-const PORT_NUMBER  = 5002;
-app.listen(PORT_NUMBER, ()=> {
-        console.log(`server is on: ${PORT_NUMBER}`)
-})
