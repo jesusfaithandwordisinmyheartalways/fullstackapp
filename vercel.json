@@ -5,23 +5,11 @@
 {
     "version": 2,
     "builds": [
-      {
-        "src": "api/*.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "frontend/pages/index.tsx",
-        "use": "@vercel/next"
-      }
+      { "src": "api/*.js", "use": "@vercel/node" },
+      { "src": "frontend/pages/index.tsx", "use": "@vercel/next" }
     ],
     "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "/api/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/frontend/pages/index.tsx"
-      }
+      { "src": "/api/(.*)", "dest": "/api/$1" },
+      { "src": "/(.*)", "dest": "/frontend/$1" }
     ]
   }
