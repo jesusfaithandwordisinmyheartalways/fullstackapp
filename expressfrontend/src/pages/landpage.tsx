@@ -29,7 +29,7 @@ const SodaLandPage:React.FC = () => {
                 setSuccessMessage('')
                 const data  = { username , password, confirmPassword , email }
                 try {
-                    const response =  await fetch('http://localhost:8001/submit', {
+                    const response =  await fetch('http://localhost:9001/submit', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

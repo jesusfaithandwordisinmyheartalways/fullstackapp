@@ -15,7 +15,7 @@ const app = express()
 
 //CORS setup: Allow request from the frontend localhost:3003
 app.use(cors({
-    origin: 'http://localhost:8000',    //allow the frontend request
+    origin: 'http://localhost:9000',    //allow the frontend request
     credentials:true,    // allow cookies to be sent/received
 }))
 
@@ -71,7 +71,12 @@ app.post('/submit', (req, res) => {
 });
 
 
-const PORT = 8001;
+app.get('/', (req, res) => {
+    res.send('Welcome to the backend of the server')
+})
+
+
+const PORT = 9001;
 app.listen(PORT, () => {
         console.log(`server is on port: ${PORT}`)
 })
