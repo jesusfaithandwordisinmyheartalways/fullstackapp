@@ -1,0 +1,6 @@
+
+
+PORT=9001
+DATABASE_URL=mongodb://localhost:27017/mydatabase
+JWT_SECRET=mySecretKey
+ALLOWED_ORIGINS=https://drinkfullstack-server.vercel.app
