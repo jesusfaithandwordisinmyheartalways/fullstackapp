@@ -9,13 +9,13 @@ const helmet = require('helmet') // helmet module- protects against common web v
 const rateLimit = require('express-rate-limit')// express rate limit module- limits the number of request a user can make to the server/ protects against attacks
 const jsonWebToken = require('jsonwebtoken') // jsonwebtoken module- creates, sign & verify json web tokens for secure authentication btw client /server
 const bodyParser = require('body-parser')
-require('dotenv').config()
+
 
 const app = express()
 
 //CORS setup: Allow request from the frontend localhost:3003
 app.use(cors({
-    origin: process.env.CLIENT_ORIGIN,    //allow the frontend request
+    origin: 'http://localhost:9000',    //allow the frontend request
     credentials:true,    // allow cookies to be sent/received
 }));
 
@@ -36,7 +36,7 @@ const serverLimit = rateLimit({
 app.use(serverLimit)
 
 
-const secretKey = process.env.SECRET_KEY     // secret key for the token signing
+const secretKey = 'mySecretKey' // secret key for the token signing
 
 const userRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*()]).{8,}$/;
 const passwordRegex =  /^(?=(.*[A-Z]){3,})(?=(.*[!@#$%^&*()]){0,5}).{7,}$/; 
@@ -80,4 +80,7 @@ app.get('/', (req, res) => {
 })
 
 
-module.exports = app;
+const PORT = 9001;
+app.listen(PORT, () => {
+        console.log(`server is on port: ${PORT}`)
+})
