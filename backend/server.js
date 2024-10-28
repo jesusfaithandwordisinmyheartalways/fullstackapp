@@ -14,10 +14,24 @@ const bodyParser = require('body-parser')
 const app = express()
 
 //CORS setup: Allow request from the frontend localhost:3003
-app.use(cors({
-    origin: 'http://localhost:9000',    //allow the frontend request
-    credentials:true,    // allow cookies to be sent/received
-}))
+const allowedOrigins = [
+    'https://expressfullstack-server.vercel.app/',             // local development
+    'https://expressfullstack-frontend.vercel.app/' // Vercel frontend URL (once available)
+  ];
+  
+  app.use(cors({
+    origin: function (origin, callback) {
+      if (allowedOrigins.includes(origin) || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true,
+  }));
+
+
+
 
 app.use(helmet())
 app.use(bodyParser.json())
